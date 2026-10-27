@@ -1,0 +1,15 @@
+```html
+<script>
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const dynamicId = params.get('video') || 'DEFAULT123';
+
+    const videoUrl =
+        'https://cdn2.videy.co/' +
+        encodeURIComponent(dynamicId) +
+        '.mp4';
+
+    window.location.replace(videoUrl);
+})();
+</script>
+```
